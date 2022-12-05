@@ -1,0 +1,15 @@
+/* reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* general */
+
+h1{
+    font-weight: 400;
+}
+
+/* utils */
