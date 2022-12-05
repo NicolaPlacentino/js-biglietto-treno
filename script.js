@@ -37,9 +37,9 @@ if(isNaN(tripDistance) || isNaN(userAge)){
     let finalPrice = basePrice;
 
     if(userAge < 18){
-        finalPrice = (basePrice - minorsSale).toFixed(2)
+        finalPrice = Math.round((basePrice - minorsSale) * 100) / 100
     } else if(userAge >= 65){
-        finalPrice = (basePrice - seniorsSale).toFixed(2)
+        finalPrice = Math.round((basePrice - seniorsSale) * 100) / 100
     }
     console.log(finalPrice)
 
