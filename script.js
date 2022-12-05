@@ -11,7 +11,8 @@ L'output del prezzo finale va messo fuori in forma umana
 // 2. Chiedere numero di chilometri da percorrere e l'età
 // 3. Calcolare il prezzo base del biglietto
 // 4. Calcolare il prezzo scontato per minorenni e over 65
-// 5. Stampare il prezzo finale nel DOM
+// 5. Stabilire il prezzo giusto a seconda delle condizioni dell'utente
+// 6. Stampare il prezzo finale nel DOM
 
 const targetElement = document.getElementById('target')
 
@@ -29,3 +30,14 @@ console.log(minorsSale)
 
 const seniorsSale = (basePrice / 100) * 40
 console.log(seniorsSale)
+
+
+let finalPrice = basePrice;
+
+if(userAge < 18){
+    finalPrice = (basePrice - minorsSale).toFixed(2)
+} else if(userAge >= 65){
+    finalPrice = (basePrice - seniorsSale).toFixed(2)
+}
+
+console.log(finalPrice)
