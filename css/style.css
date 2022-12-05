@@ -8,8 +8,17 @@
 
 /* general */
 
+body{
+    font-family: sans-serif;
+}
+
 h1{
-    font-weight: 400;
+    font-weight:normal;
+    margin: 1em;
+}
+
+span{
+    font-weight: bold;
 }
 
 /* utils */

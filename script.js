@@ -39,5 +39,7 @@ if(userAge < 18){
 } else if(userAge >= 65){
     finalPrice = (basePrice - seniorsSale).toFixed(2)
 }
-
 console.log(finalPrice)
+
+
+targetElement.innerText = finalPrice + '€'
