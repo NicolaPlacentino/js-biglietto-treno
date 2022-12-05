@@ -15,6 +15,12 @@ L'output del prezzo finale va messo fuori in forma umana
 
 const targetElement = document.getElementById('target')
 
+
 const tripDistance = parseInt(prompt('Quanti chilometri devi percorrere?', 100).trim())
 
 const userAge = parseInt(prompt('Quanti anni hai?', 18).trim())
+
+
+const basePrice = tripDistance * 0.21
+console.log(basePrice)
+
