@@ -24,3 +24,8 @@ const userAge = parseInt(prompt('Quanti anni hai?', 18).trim())
 const basePrice = tripDistance * 0.21
 console.log(basePrice)
 
+const minorsSale = (basePrice / 100) * 20
+console.log(minorsSale)
+
+const seniorsSale = (basePrice / 100) * 40
+console.log(seniorsSale)
