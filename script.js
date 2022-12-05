@@ -13,3 +13,4 @@ L'output del prezzo finale va messo fuori in forma umana
 // 4. Calcolare il prezzo scontato per minorenni e over 65
 // 5. Stampare il prezzo finale nel DOM
 
+const targetElement = document.getElementById('target')
