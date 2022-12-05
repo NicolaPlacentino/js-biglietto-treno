@@ -26,23 +26,17 @@ if(isNaN(tripDistance) || isNaN(userAge)){
 } else {
     const basePrice = tripDistance * 0.21
     console.log(basePrice)
-    
-    const minorsSale = (basePrice / 100) * 20
-    console.log(minorsSale)
-    
-    const seniorsSale = (basePrice / 100) * 40
-    console.log(seniorsSale)
-    
+
     
     let finalPrice = basePrice;
 
     if(userAge < 18){
-        finalPrice = Math.round((basePrice - minorsSale) * 100) / 100
+        finalPrice = basePrice - basePrice * 0.2
     } else if(userAge >= 65){
-        finalPrice = Math.round((basePrice - seniorsSale) * 100) / 100
+        finalPrice = basePrice - basePrice * 0.4
     }
     console.log(finalPrice)
 
 
-    targetElement.innerText = finalPrice + '€'
+    targetElement.innerText = finalPrice.toFixed(2) + '€'
 }
