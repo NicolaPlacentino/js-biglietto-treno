@@ -21,25 +21,28 @@ const tripDistance = parseInt(prompt('Quanti chilometri devi percorrere?', 100).
 
 const userAge = parseInt(prompt('Quanti anni hai?', 18).trim())
 
+if(isNaN(tripDistance) || isNaN(userAge)){
+    alert('Attenzione! Puoi inserire solo valori numerici.')
+} else {
+    const basePrice = tripDistance * 0.21
+    console.log(basePrice)
+    
+    const minorsSale = (basePrice / 100) * 20
+    console.log(minorsSale)
+    
+    const seniorsSale = (basePrice / 100) * 40
+    console.log(seniorsSale)
+    
+    
+    let finalPrice = basePrice;
 
-const basePrice = tripDistance * 0.21
-console.log(basePrice)
-
-const minorsSale = (basePrice / 100) * 20
-console.log(minorsSale)
-
-const seniorsSale = (basePrice / 100) * 40
-console.log(seniorsSale)
+    if(userAge < 18){
+        finalPrice = (basePrice - minorsSale).toFixed(2)
+    } else if(userAge >= 65){
+        finalPrice = (basePrice - seniorsSale).toFixed(2)
+    }
+    console.log(finalPrice)
 
 
-let finalPrice = basePrice;
-
-if(userAge < 18){
-    finalPrice = (basePrice - minorsSale).toFixed(2)
-} else if(userAge >= 65){
-    finalPrice = (basePrice - seniorsSale).toFixed(2)
+    targetElement.innerText = finalPrice + '€'
 }
-console.log(finalPrice)
-
-
-targetElement.innerText = finalPrice + '€'
