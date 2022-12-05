@@ -14,3 +14,7 @@ L'output del prezzo finale va messo fuori in forma umana
 // 5. Stampare il prezzo finale nel DOM
 
 const targetElement = document.getElementById('target')
+
+const tripDistance = parseInt(prompt('Quanti chilometri devi percorrere?', 100).trim())
+
+const userAge = parseInt(prompt('Quanti anni hai?', 18).trim())
